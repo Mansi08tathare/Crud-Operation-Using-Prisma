@@ -10,7 +10,8 @@ export class BooksService {
   }
   
   async create(createBookDto: Prisma.BookCreateInput) {
-    return this.databaseService.book.create({data:createBookDto});
+    let resp = await this.databaseService.book.create({data:createBookDto});
+    return resp
   }
 
   async findAll() {
