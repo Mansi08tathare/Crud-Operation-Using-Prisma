@@ -15,31 +15,35 @@ export class BooksService {
   }
 
   async findAll() {
-    return this.databaseService.book.findMany({});
+    let resp = this.databaseService.book.findMany({});
+    return resp
   }
 
    async findOne(id: number) {
-    return this.databaseService.book.findUnique({
+     let resp =this.databaseService.book.findUnique({
       where:{
         id
       }
     });
+    return resp
   }
 
   async  update(id: number, updateBookDto: Prisma.BookUpdateInput) {
-    return this.databaseService.book.update({
+    let resp = this.databaseService.book.update({
       where:{
         id
       },
       data:updateBookDto
     });
+    return resp
   }
 
   async  remove(id: number) {
-    return this.databaseService.book.delete({
+    let resp = this.databaseService.book.delete({
       where:{
         id
       }
     });
+    return resp
   }
 }
