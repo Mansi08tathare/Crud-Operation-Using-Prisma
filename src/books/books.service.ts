@@ -45,7 +45,8 @@ export class BooksService {
       }
     });
     return {
-      status:HttpStatus.OK
+      status:HttpStatus.OK,
+      resp:'Deleted Successfully'
     }
   }
 }
