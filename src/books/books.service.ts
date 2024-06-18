@@ -46,7 +46,8 @@ export class BooksService {
     });
     return {
       status:HttpStatus.OK,
-      resp:'Deleted id Successfully'
+      resp:resp,
+      msg:'Deleted Successfully'
     }
   }
 }
