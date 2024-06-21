@@ -35,7 +35,11 @@ export class BooksService {
       },
       data:updateBookDto
     });
-    return resp
+    return{
+      status:HttpStatus.OK,
+      resp:resp,
+      
+    }
   }
 
   async  remove(id: number) {
