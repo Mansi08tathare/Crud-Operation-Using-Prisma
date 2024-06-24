@@ -25,7 +25,10 @@ export class BooksService {
         id
       }
     });
-    return resp
+    return {
+      status:HttpStatus.OK,
+      resp:resp
+    }
   }
 
   async  update(id: number, updateBookDto: Prisma.BookUpdateInput) {
