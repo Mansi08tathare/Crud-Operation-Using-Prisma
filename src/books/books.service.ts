@@ -27,7 +27,8 @@ export class BooksService {
     });
     return {
       status:HttpStatus.OK,
-      resp:resp
+      resp:resp,
+      msg:'Retrieved successfully'
     }
   }
 
