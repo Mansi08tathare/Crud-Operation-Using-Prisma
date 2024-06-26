@@ -16,7 +16,10 @@ export class BooksService {
 
   async findAll() {
     let resp = this.databaseService.book.findMany({});
-    return resp
+    return {
+      status:HttpStatus.OK,
+      resp:resp
+    }
   }
 
    async findOne(id: number) {
