@@ -18,7 +18,8 @@ export class BooksService {
     let resp = this.databaseService.book.findMany({});
     return {
       status:HttpStatus.OK,
-      resp:resp
+      resp:resp,
+      msg:'retrieved all successfully'
     }
   }
 
