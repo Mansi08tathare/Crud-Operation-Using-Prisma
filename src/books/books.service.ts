@@ -11,7 +11,9 @@ export class BooksService {
   
   async create(createBookDto: Prisma.BookCreateInput) {
     let resp = await this.databaseService.book.create({data:createBookDto});
-    return resp
+    return {
+      status:HttpStatus.OK
+    }
   }
 
   async findAll() {
