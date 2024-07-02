@@ -13,6 +13,7 @@ export class BooksService {
     let resp = await this.databaseService.book.create({data:createBookDto});
     return {
       status:HttpStatus.OK,
+      resp:resp,
       msg:'added successfully'
     }
   }
