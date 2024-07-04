@@ -14,7 +14,7 @@ export class BooksService {
     return {
       status:HttpStatus.OK,
       resp:resp,
-      msg:' successfully added'
+      msg:' successfully added db'
     }
   }
 
